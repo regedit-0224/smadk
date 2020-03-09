@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    0.0.1a_1
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SMADKv2-Area 2</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <center><img src="picture.png">
+        <script src="script.js"></script>
+        <div id="actionarea">
+            <div id="wood-container">
+                <p>Wood: <span id="wood">0</span></p><br>
+                <button id="chop" onclick="chop();" class="action-buttons">Chop</button>
+            </div>
+            <div id="stonecontainer" class="hidden">
+                <p>Stone: <span id="stone">0</span></p><br>
+                <button id="mine" onclick="mine();" class="action-buttons">Mine</button>
+            </div>
+            <div id="ironcontainer" class="hidden">
+                <p>Iron: <span id="iron">0</span></p><br>
+                <button id="ironmine" onclick="ironMine();" class="action-buttons">Drill</button>
+            </div>
+            <div id="coalcontainer" class="hidden">
+                <p>Coal: <span id="coal">0</span></p><br>
+                <button id="coalmine" onclick="coalMine();" class="action-buttons">Mine</button>
+            </div>
+            <div id="silvercontainer" class="hidden">
+                <p>Silver: <span id="silver">0</span></p><br>
+                <button id="silvermine" onclick="silverMine();" class="action-buttons">Mine</button>
+            </div>
+            <div id="goldcontainer" class="hidden">
+                <p>Gold: <span id="gold">0</span></p><br>
+                <button id="goldmine" onclick="goldMine();" class="action-buttons">Mine</button>
+            </div>
+            <div id="rubycontainer" class="hidden">
+                <p>Ruby: <span id="ruby">0</span></p><br>
+                <button id="rubymine" onclick="rubyMine();" class="action-buttons">Mine</button>
+            </div>
+            <div id="areabutton2" class="hidden">
+                <input type="button" onclick="location.href='index3.html';" value="Area 3!" class="action-buttons">
+            </div>
+        </div>
+        <fieldset>
+            <legend>Craft</legend>
+            <button id="pickaxebuy" onclick="craftPickaxe();" class="action-buttons">Craft Pickaxe <span id="pickLevel">1 (10 wood)</span></button>
+            <button id="axebuy" onclick="craftAxe();" class="action-buttons">Craft Axe <span id="axeLevel">1 (5 wood)</span></button>
+            <button id="drillbuy" onclick="craftDrill();" class="action-buttons">Craft Drill <span id="drillLevel">1 (50 stone)</span></button>
+            <button id="extractorbuy" onclick="craftExtractor();" class="action-buttons">Craft Extractor <span id="extractorLevel">1 (25 iron)</span></button>
+            <button id="minerbuy" onclick="craftMiner();" class="action-buttons">Craft Miner <span id="minerLevel">1 (15 coal)</span></button>
+            <button id="goldminer" onclick="craftGoldminer();" class="action-buttons">Craft Goldminer <span id="goldminerLevel">1 (100 silver)</span></button>
+            <button id="rubyminer" onclick="craftRubyminer();" class="action-buttons">Craft Rubyminer <span id="rubyminerLevel">1 (147 gold)</span></button>
+        </fieldset>
+    </center>
+
+    <center>
+        <fieldset id="badges">
+            <legend>Badges</legend>
+            <div id="wood-badges">
+                Wood Badges:
+                <div id="wood-badge-1" class="hidden">1K wood chopped!</div>
+                <div id="wood-badge-2" class="hidden">10K wood chopped!</div>
+                <div id="wood-badge-3" class="hidden">100K wood chopped!</div>
+                <div id="wood-badge-4" class="hidden">1M wood chopped!</div>
+            </div>
+            </div>
+            Stone Badges:
+            <div id="stone-badge-1" class="hidden">1K stone obtained!</div>
+            <div id="stone-badge-2" class="hidden">10K stone obtained!</div>
+            <div id="stone-badge-3" class="hidden">100K stone obtained!</div>
+            <div id="stone-badge-4" class="hidden">1M stone obtained! </div>
+            </div>
+            <div>
+                Iron Badges:
+                <div id="iron-badge-1" class="hidden">1K iron drilled!</div>
+                <div id="iron-badge-2" class="hidden">10K iron drilled!</div>
+                <div id="iron-badge-3" class="hidden">100K iron drilled!</div>
+                <div id="iron-badge-4" class="hidden">1M iron drilled!</div>
+            </div>
+            <div>
+                Coal Badges:
+                <div id="coal-badge-1" class="hidden">1K coal extracted!</div>
+                <div id="coal-badge-2" class="hidden">10K coal extracted!</div>
+                <div id="coal-badge-3" class="hidden">100K coal extracted!</div>
+                <div id="coal-badge-4" class="hidden">1M coal extracted!</div>
+            </div>
+            <div>
+                Silver Badges:
+                <div id="silver-badge-1" class="hidden">1K silver obtained!</div>
+                <div id="silver-badge-2" class="hidden">10K silver obtained!</div>
+                <div id="silver-badge-3" class="hidden">100K silver obtained!</div>
+                <div id="silver-badge-4" class="hidden">1M silver obtained!</div>
+            </div>
+            Gold Badges:
+            <div id="gold-badge-1" class="hidden">1K gold obtained!</div>
+            <div id="gold-badge-2" class="hidden">10K gold obtained!</div>
+            <div id="gold-badge-3" class="hidden">100K gold obtained!</div>
+            <div id="gold-badge-4" class="hidden">1M gold. HOrRAy!</div>
+            Ruby Badges:
+            <div id="ruby-badge-1" class="hidden">1K ruby obtained!</div>
+            <div id="ruby-badge-2" class="hidden">10K ruby obtained!</div>
+            <div id="ruby-badge-3" class="hidden">100K ruby obtained!</div>
+            <div id="ruby-badge-4" class="hidden">1M ruby obtained!</div>
+        </fieldset>
+    </center>
+    <center>
+        <div id="updatelogbutton">
+            <input type="button" onclick="location.href='updatelog.html';" value="Update Log" class="action-buttons"></center>
+</body>
+
+</html>
