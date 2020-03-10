@@ -45,188 +45,188 @@ function updateView() {
 }
 
 
-    if (goldminer >= 1) {
-        show("words");
-    }
-    if (gold >= 1000) {
-        show("areabutton");
-    }
-    if (wood >= 1000) {
-        show("wood-badge-1");
-    }
-    if (wood >= 10000) {
-        show("wood-badge-2");
-    }
-    if (wood >= 100000) {
-        show("wood-badge-3");
-    }
-    if (wood >= 1000000) {
-        show("wood-badge-4");
-    }
-    if (stone >= 1000) {
-        show("stone-badge-1");
-    }
-    if (stone >= 10000) {
-        show("stone-badge-2");
-    }
-    if (stone >= 100000) {
-        show("stone-badge-3");
-    }
-    if (stone >= 1000000) {
-        show("stone-badge-4");
-    }
-    if (iron >= 1000) {
-        show("iron-badge-1");
-    }
-    if (iron >= 10000) {
-        show("iron-badge-2");
-    }
-    if (iron >= 100000) {
-        show("iron-badge-3");
-    }
-    if (iron >= 1000000) {
-        show("iron-badge-4");
-    }
-    if (coal >= 1000) {
-        show("coal-badge-1");
-    }
-    if (coal >= 10000) {
-        show("coal-badge-2");
-    }
-    if (coal >= 100000) {
-        show("coal-badge-3");
-    }
-    if (coal >= 1000000) {
-        show("coal-badge-4");
-    }
-    if (silver >= 1000) {
-        show("silver-badge-1");
-    }
-    if (silver >= 10000) {
-        show("silver-badge-2");
-    }
-    if (silver >= 100000) {
-        show("silver-badge-3");
-    }
-    if (silver >= 1000000) {
-        show("silver-badge-4");
-    }
-    if (gold >= 1000) {
-        show("gold-badge-1");
-    }
-    if (gold >= 10000) {
-        show("gold-badge-2");
-    }
-    if (gold >= 100000) {
-        show("gold-badge-3");
-    }
-    if (gold >= 1000000) {
-        show("gold-badge-4");
-    }
-    if (pickaxe >= 1) {
-        show("stonecontainer");
-    }
-    if (drill >= 1) {
-        show("ironcontainer");
-    }
-    if (extractor >= 1) {
-        show("coalcontainer");
-    }
-    if (miner >= 1) {
-        show("silvercontainer");
-    }
-    if (goldminer >= 1) {
-        show("goldcontainer");
-    }
+if (goldminer >= 1) {
+    show("words");
+}
+if (gold >= 1000) {
+    show("areabutton");
+}
+if (wood >= 1000) {
+    show("wood-badge-1");
+}
+if (wood >= 10000) {
+    show("wood-badge-2");
+}
+if (wood >= 100000) {
+    show("wood-badge-3");
+}
+if (wood >= 1000000) {
+    show("wood-badge-4");
+}
+if (stone >= 1000) {
+    show("stone-badge-1");
+}
+if (stone >= 10000) {
+    show("stone-badge-2");
+}
+if (stone >= 100000) {
+    show("stone-badge-3");
+}
+if (stone >= 1000000) {
+    show("stone-badge-4");
+}
+if (iron >= 1000) {
+    show("iron-badge-1");
+}
+if (iron >= 10000) {
+    show("iron-badge-2");
+}
+if (iron >= 100000) {
+    show("iron-badge-3");
+}
+if (iron >= 1000000) {
+    show("iron-badge-4");
+}
+if (coal >= 1000) {
+    show("coal-badge-1");
+}
+if (coal >= 10000) {
+    show("coal-badge-2");
+}
+if (coal >= 100000) {
+    show("coal-badge-3");
+}
+if (coal >= 1000000) {
+    show("coal-badge-4");
+}
+if (silver >= 1000) {
+    show("silver-badge-1");
+}
+if (silver >= 10000) {
+    show("silver-badge-2");
+}
+if (silver >= 100000) {
+    show("silver-badge-3");
+}
+if (silver >= 1000000) {
+    show("silver-badge-4");
+}
+if (gold >= 1000) {
+    show("gold-badge-1");
+}
+if (gold >= 10000) {
+    show("gold-badge-2");
+}
+if (gold >= 100000) {
+    show("gold-badge-3");
+}
+if (gold >= 1000000) {
+    show("gold-badge-4");
+}
+if (pickaxe >= 1) {
+    show("stonecontainer");
+}
+if (drill >= 1) {
+    show("ironcontainer");
+}
+if (extractor >= 1) {
+    show("coalcontainer");
+}
+if (miner >= 1) {
+    show("silvercontainer");
+}
+if (goldminer >= 1) {
+    show("goldcontainer");
+}
 
 
-    function chop() {
-        wood += axe + 1;
-        chopsound.play();
+function chop() {
+    wood += axe + 1;
+    chopsound.play();
+    updateView();
+}
+
+function mine() {
+    stone += pickaxe;
+    updateView();
+
+}
+
+function ironMine() {
+    iron += drill;
+    updateView();
+
+}
+
+function coalMine() {
+    coal += extractor;
+    updateView();
+
+}
+
+function silverMine() {
+    silver += miner;
+    updateView();
+}
+
+function goldMine() {
+    gold += goldminer;
+    updateView();
+}
+
+function craftPickaxe() {
+    if (wood >= pickCost) {
+        pickaxe++;
+        wood -= pickCost;
+        pickCost *= 1.1;
         updateView();
     }
+}
 
-    function mine() {
-        stone += pickaxe;
-        updateView();
-
-    }
-
-    function ironMine() {
-        iron += drill;
-        updateView();
-
-    }
-
-    function coalMine() {
-        coal += extractor;
-        updateView();
-
-    }
-
-    function silverMine() {
-        silver += miner;
+function craftAxe() {
+    if (wood >= axeCost) {
+        axe++;
+        wood -= axeCost;
+        axeCost *= 1.1;
         updateView();
     }
+}
 
-    function goldMine() {
-        gold += goldminer;
+function craftDrill() {
+    if (stone >= drillCost) {
+        drill++;
+        stone -= drillCost;
+        drillCost *= 1.1;
         updateView();
     }
+}
 
-    function craftPickaxe() {
-        if (wood >= pickCost) {
-            pickaxe++;
-            wood -= pickCost;
-            pickCost *= 1.1;
-            updateView();
-        }
+function craftExtractor() {
+    if (iron >= extractorCost) {
+        extractor++;
+        iron -= extractorCost;
+        extractorCost *= 1.1;
+        updateView();
     }
+}
 
-    function craftAxe() {
-        if (wood >= axeCost) {
-            axe++;
-            wood -= axeCost;
-            axeCost *= 1.1;
-            updateView();
-        }
+function craftMiner() {
+    if (coal >= minerCost) {
+        miner++;
+        coal -= minerCost;
+        minerCost *= 1.1;
+        updateView();
     }
+}
 
-    function craftDrill() {
-        if (stone >= drillCost) {
-            drill++;
-            stone -= drillCost;
-            drillCost *= 1.1;
-            updateView();
-        }
+function craftGoldminer() {
+    if (silver >= goldminerCost) {
+        goldminer++;
+        silver -= goldminerCost;
+        goldminerCost *= 1.1;
+        updateView();
     }
-
-    function craftExtractor() {
-        if (iron >= extractorCost) {
-            extractor++;
-            iron -= extractorCost;
-            extractorCost *= 1.1;
-            updateView();
-        }
-    }
-
-    function craftMiner() {
-        if (coal >= minerCost) {
-            miner++;
-            coal -= minerCost;
-            minerCost *= 1.1;
-            updateView();
-        }
-    }
-
-    function craftGoldminer() {
-        if (silver >= goldminerCost) {
-            goldminer++;
-            silver -= goldminerCost;
-            goldminerCost *= 1.1;
-            updateView();
-        }
-    }
+}
 
 
 
