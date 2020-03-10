@@ -42,6 +42,7 @@ function updateView() {
     showVal("extractorLevel", extractor + 1 + "&#32; &#40;" + extractorCost + "&#32; iron" + "&#41;");
     showVal("minerLevel", miner + 1 + "&#32; &#40;" + minerCost + "&#32; coal" + "&#41;");
     showVal("goldminerLevel", goldminer + 1 + "&#32; &#40;" + goldminerCost + "&#32; silver" + "&#41;");
+}
 
 
     if (goldminer >= 1) {
@@ -226,7 +227,7 @@ function updateView() {
             updateView();
         }
     }
-}
+
 
 
 
