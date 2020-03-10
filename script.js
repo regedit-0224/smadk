@@ -38,7 +38,6 @@ function updateView() {
     showVal("coal", coal);
     showVal("silver", silver);
     showVal("gold", gold);
-    showVal("ruby", ruby);
     showVal("pickLevel", pickaxe + 1 + "&#32; &#40;" + pickCost + "&#32; wood" + "&#41;");
     showVal("axeLevel", axe + 1 + "&#32; &#40;" + axeCost + "&#32; wood" + "&#41;");
     showVal("drillLevel", drill + 1 + "&#32; &#40;" + drillCost + "&#32; stone" + "&#41;");
