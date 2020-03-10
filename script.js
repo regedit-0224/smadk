@@ -20,8 +20,6 @@ var miner = 0;
 var minerCost = 15;
 var goldminer = 0;
 var goldminerCost = 100;
-var rubyminer = 0;
-var rubyminerCost = 147;
 
 function showVal(id, val) {
     document.getElementById(id).innerHTML = val;
@@ -44,7 +42,6 @@ function updateView() {
     showVal("extractorLevel", extractor + 1 + "&#32; &#40;" + extractorCost + "&#32; iron" + "&#41;");
     showVal("minerLevel", miner + 1 + "&#32; &#40;" + minerCost + "&#32; coal" + "&#41;");
     showVal("goldminerLevel", goldminer + 1 + "&#32; &#40;" + goldminerCost + "&#32; silver" + "&#41;");
-    showVal("rubyminerLevel", rubyminer + 1 + "&#32; &#40;" + rubyminerCost + "&#32; gold" + "&#41;");
 }
 
 
@@ -126,18 +123,6 @@ if (gold >= 100000) {
 if (gold >= 1000000) {
     show("gold-badge-4");
 }
-if (ruby >= 1000) {
-    show("ruby-badge-1");
-}
-if (ruby >= 10000) {
-    show("ruby-badge-2");
-}
-if (ruby >= 100000) {
-    show("ruby-badge-3");
-}
-if (ruby >= 1000000) {
-    show("ruby-badge-4");
-}
 if (pickaxe >= 1) {
     show("stonecontainer");
 }
@@ -152,12 +137,6 @@ if (miner >= 1) {
 }
 if (goldminer >= 1) {
     show("goldcontainer");
-}
-if (rubyminer >= 1) {
-    show("rubycontainer");
-}
-if (ruby >= 1000) {
-    show("areabutton2");
 }
 
 
@@ -192,11 +171,6 @@ function silverMine() {
 
 function goldMine() {
     gold += goldminer;
-    updateView();
-}
-
-function rubyMine() {
-    ruby += rubyminer;
     updateView();
 }
 
@@ -250,15 +224,6 @@ function craftGoldminer() {
         goldminer++;
         silver -= goldminerCost;
         goldminerCost *= 1.1;
-        updateView();
-    }
-}
-
-function craftRubyminer() {
-    if (gold >= rubyminerCost) {
-        rubyminer++;
-        gold -= rubyminerCost;
-        rubyminerCost *= 1.1;
         updateView();
     }
 }
